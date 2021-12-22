@@ -105,6 +105,7 @@ const [targetEntry, setTargetEntry] = useState(nullEntry)
     <div className="App">
    
       <Routes>
+        <Route path="/" element={<AllEntries entries={entries}/>}/>
         <Route path="/entry" element={<AllEntries entries={entries}/>}/>
         <Route path="/entry/:id" element={<SingleEntry entries={entries}
         edit={getTargetEntry}
