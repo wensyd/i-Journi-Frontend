@@ -1,70 +1,51 @@
-# Getting Started with Create React App
+# i-Journi - Capstone Project
+#### By Wensy DeSousa
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Project Summary
 
-## Available Scripts
+I-Journi is a journal application with a Reactjs Frontend. The frontend has an index, show, create, update, and delete routes. The frontend is styled using tailwindCSS and heroicons. 
+## Schema
 
-In the project directory, you can run:
 
-### `npm start`
+{
+    table.increments("id")
+    table.string("date")
+    table.string("title")
+    table.string("body", length= 3000)
+    table.timestamps()
+}
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Route Table
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+List your routes in a table
 
-### `npm test`
+| url | method | action |
+|-----|--------|--------|
+| /entry | get | get all entries (index)|
+| /entry/:id | get | get a particular entry (show)|
+| /entry/new | get | return form to create a new entry (new)|
+| / | post | get post request to /entry, create new and redirect to index (create)|
+| /entry/:id/edit | get | edit a particular entry (edit)|
+| /entry/:id | put | put request to /entry/:id (update)|
+| /entry/:id | delete | deletes a particular entry (destroy)|
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## User Stories
 
-### `npm run build`
+-user can view all entries on main page (index).
+-user can select entry and it redirects to show page for that particular entry. 
+-user can edit entry, title, and body of each entry.
+-user can delete entry.
+-user can update entry.
+-user can create new entry. 
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## List of Technologies
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+-React
+-JS
+-tailwindCSS
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Challenges
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- The biggest challenge was learning how to style with tailwindCSS. It was the first time using the styling library. The cards were a challenge to align properly on the main page to display all journal entries. Once I was able to figure it out I was able to style the cards horizontally. On the show page the background was a challenge to display in full width as it will not adjust unless there is more content added. The footer was also a challenge due to the lack of content on the page.
