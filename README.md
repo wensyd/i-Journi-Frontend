@@ -49,3 +49,4 @@ List your routes in a table
 ## Challenges
 
 - The biggest challenge was learning how to style with tailwindCSS. It was the first time using the styling library. The cards were a challenge to align properly on the main page to display all journal entries. Once I was able to figure it out I was able to style the cards horizontally. On the show page the background was a challenge to display in full width as it will not adjust unless there is more content added. The footer was also a challenge due to the lack of content on the page.
+- Deploying was also a challenge because tailwindCSS uses a different build script which had to be tailored as it was not reading the output.css file. 
